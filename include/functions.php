@@ -49,8 +49,8 @@ function isValidEmail($email) {
 }
 function filterPhone($number) {
 	$new_number = preg_replace("/[^0-9.]/", "", $number); // numerik olmayan karakterleri siler
-	if(substr($new_number,1) != 5) { // ilk karakter 5 değilse
-		$new_number = substr($new_number,1,strlen($new_number)); // ilk karakteri siler
+	if(substr($new_number,0,1) != 5) { // ilk karakter 5 değilse
+		$new_number = substr($new_number,1); // ilk karakteri siler
 	}
 	return($new_number);
 }
