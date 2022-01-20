@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 20 Oca 2022, 17:11:06
+-- Üretim Zamanı: 20 Oca 2022, 19:39:45
 -- Sunucu sürümü: 10.4.14-MariaDB
 -- PHP Sürümü: 7.4.11
 
@@ -70,6 +70,17 @@ CREATE TABLE `periods` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Tablo döküm verisi `periods`
+--
+
+INSERT INTO `periods` (`period_id`, `period_name`, `period`, `period_status`, `create_at`, `update_at`) VALUES
+(1, 'Ocak 2022', '2022-01', 1, '2022-01-20 21:06:54', NULL),
+(2, 'Şubat 2022', '2022-02', 1, '2022-01-20 21:06:54', NULL),
+(3, 'Mart 2022', '2022-03', 1, '2022-01-20 21:06:54', NULL),
+(4, 'Nisan 2022', '2022-04', 1, '2022-01-20 21:06:54', NULL),
+(5, 'Mayıs 2022', '2022-05', 1, '2022-01-20 21:06:54', NULL);
+
+--
 -- Dökümü yapılmış tablolar için indeksler
 --
 
@@ -105,7 +116,7 @@ ALTER TABLE `campaigns`
 -- Tablo için AUTO_INCREMENT değeri `periods`
 --
 ALTER TABLE `periods`
-  MODIFY `period_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `period_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
